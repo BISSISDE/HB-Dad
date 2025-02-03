@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Oleo+Script:wght@400;700&family=Orelega+One&family=Pacifico&family=Permanent+Marker&family=Rubik+Dirt&family=Rubik+Scribble&family=Rubik+Spray+Paint&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Pacifico", serif;
+}
+
+.background {
+    background: linear-gradient(45deg, #1d1d1d, #ff6f61);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInBackground 3s ease-in-out;
+}
+
+.content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 60px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    transform: scale(0);
+    animation: popUp 0.8s ease-out forwards;
+    max-width: 80%;
+}
+
+.title {
+    font-family: "Rubik Scribble", serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffe645;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    animation: textIn 2s ease-in-out;
+}
+
+.message {
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-style: italic;
+    animation: fadeInMessage 2s ease-in-out;
+}
+
+.btn {
+    font-family: "Rubik Scribble", serif;
+    background-color: #375c79;
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #597257;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+.surprise {
+    margin-top: 40px;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.surprise .by {
+    margin-top: 60px;
+    text-align: end;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes textIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInMessage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content {
+        padding: 50px 40px;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .message {
+        font-size: 22px;
+    }
+
+    .btn {
+        padding: 18px 40px;
+        font-size: 20px;
+    }
+
+    .background {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 40px 30px;
+    }
+
+    .title {
+        font-size: 45px;
+    }
+
+    .message {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 16px 35px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    .content {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+
+    .title {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .message {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .background {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
